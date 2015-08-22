@@ -1,0 +1,77 @@
+ <RelativeLayout
+        tools:context="com.example.remo.interviewunleashed.Login"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="100"
+        android:background="#3399ff"
+        >
+
+        <TextView
+            android:id="@+id/usert"
+            android:layout_margin="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:text="User Name"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="#ffffff" />
+        <EditText
+            android:id="@+id/useedit"
+            android:layout_margin="30dp"
+            android:inputType="text"
+            android:layout_toRightOf="@id/usert"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#ffffff"
+            />
+        <TextView
+            android:layout_margin="30dp"
+            android:id="@+id/passwt"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Password"
+            android:layout_below="@+id/usert"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="#ffffff" />
+        <EditText
+            android:id="@+id/passedit"
+            android:layout_toRightOf="@id/passwt"
+            android:layout_margin="30dp"
+            android:layout_below="@id/useedit"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#ffffff"
+            />
+        <LinearLayout
+            android:layout_below="@id/passwt"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <Button
+                android:background="#333399"
+                android:textColor="#ffffff"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Create Account"
+                android:onClick="createaccount"
+                android:layout_weight="50"/>
+            <Button
+                android:layout_marginLeft="5dp"
+                android:background="#333399"
+                android:textColor="#ffffff"
+                android:layout_marginRight="10dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Login"
+                android:onClick="login"
+                android:layout_weight="50"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+

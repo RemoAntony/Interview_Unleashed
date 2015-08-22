@@ -1,0 +1,118 @@
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- The main content view -->
+    <TextView
+        android:text="Home"
+        android:gravity="center_horizontal"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:background="#66ccff"
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- The navigation drawer list-->
+    <ScrollView
+        android:id="@+id/drawer_list"
+        android:layout_width="350dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#8c489f"
+
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp" >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <View
+                android:background="#c3c3e5"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"/>
+            <ImageView
+                android:scaleType="centerCrop"
+                android:src="@drawable/splash"
+                android:layout_width="match_parent"
+                android:layout_height="80dp" />
+            <View
+                android:background="#c3c3e5"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"/>
+           <Button
+               android:id="@+id/dsln"
+               android:background="#8c489f"
+               android:onClick="dsln"
+               android:text="Data Structures"
+               android:layout_gravity="center"
+               android:textAppearance="?android:textAppearanceMedium"
+               android:textColor="#ffffff"
+               android:layout_width="match_parent"
+               android:layout_height="80dp" />
+            <View
+                android:background="#c3c3e5"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"/>
+            <Button
+                android:background="#8c489f"
+                android:id="@+id/algoln"
+                android:onClick="algoln"
+                android:text="Algorithms"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="#ffffff"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="80dp" />
+            <View
+                android:background="#c3c3e5"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"/>
+            <Button
+                android:background="#8c489f"
+                android:onClick="cln"
+                android:id="@+id/cln"
+                android:text="C"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="#ffffff"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="80dp" />
+            <View
+                android:background="#c3c3e5"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"/>
+            <Button
+                android:background="#8c489f"
+                android:onClick="cppln"
+                android:id="@+id/cppln"
+                android:text="C++"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:layout_gravity="center"
+                android:textColor="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="80dp" />
+            <View
+                android:background="#c3c3e5"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"/>
+            <Button
+                android:background="#8c489f"
+                android:onClick="javaln"
+                android:id="@+id/javaln"
+                android:layout_gravity="center"
+                android:text="Java"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="80dp" />
+            <View
+                android:background="#c3c3e5"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</android.support.v4.widget.DrawerLayout>

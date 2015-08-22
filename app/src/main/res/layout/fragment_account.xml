@@ -1,0 +1,101 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#3399ff"
+    tools:context="com.example.remo.interviewunleashed.Account">
+<LinearLayout
+    android:layout_margin="30dp"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:orientation="horizontal"
+    android:layout_weight="50">
+    <TextView
+        android:textColor="#ffffff"
+        android:text="User Name:"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="50"/>
+    <EditText
+        android:id="@+id/uname"
+        android:background="#ffffff"
+        android:layout_weight="50"
+        android:layout_width="0dp"
+        android:layout_height="50dp" />
+</LinearLayout>
+    <LinearLayout
+        android:layout_margin="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="50">
+        <TextView
+            android:textColor="#ffffff"
+            android:text="Email ID:"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"/>
+        <EditText
+            android:id="@+id/emailid"
+            android:inputType="textEmailAddress"
+            android:background="#ffffff"
+            android:layout_weight="50"
+            android:layout_width="0dp"
+            android:layout_height="50dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_margin="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="50">
+        <TextView
+            android:textColor="#ffffff"
+            android:text="Password:"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"/>
+        <EditText
+            android:id="@+id/passreg"
+            android:inputType="textPassword"
+            android:background="#ffffff"
+            android:layout_weight="50"
+            android:layout_width="0dp"
+            android:layout_height="50dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_margin="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="50">
+        <TextView
+            android:textColor="#ffffff"
+            android:text="Confirm Password:"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"/>
+        <EditText
+            android:id="@+id/conpassreg"
+            android:inputType="textPassword"
+            android:background="#ffffff"
+            android:layout_weight="50"
+            android:layout_width="0dp"
+            android:layout_height="50dp" />
+    </LinearLayout>
+
+<Button
+    android:text="Register"
+    android:layout_margin="40dp"
+    android:textColor="#ffffff"
+    android:background="#333399"
+    android:onClick="signup"
+    android:layout_width="match_parent"
+    android:layout_height="50dp" />
+
+
+</LinearLayout>
