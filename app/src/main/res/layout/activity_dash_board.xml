@@ -5,15 +5,22 @@
     android:layout_height="match_parent" >
 
     <!-- The main content view -->
-    <TextView
+    <ScrollView
         android:text="Home"
         android:gravity="center_horizontal"
         android:textAppearance="?android:textAppearanceLarge"
         android:background="#66ccff"
-        android:id="@+id/content_frame"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+        </LinearLayout>
+</ScrollView>
     <!-- The navigation drawer list-->
     <ScrollView
         android:id="@+id/drawer_list"

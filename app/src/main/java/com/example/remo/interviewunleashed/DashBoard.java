@@ -9,9 +9,11 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -92,16 +94,26 @@ public class DashBoard extends ActionBarActivity {
             public void done(List<ParseObject> scoreList, ParseException e) {
                 if (e == null) {
                     Log.d("MEWTWO", "Retrieved " + scoreList.size() + " scores");
-                    TextView tv=(TextView)findViewById(R.id.content_frame);
+                   // TextView tv=(TextView)findViewById(R.id.content_frame);
+                    LayoutInflater lin=(LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+                    LinearLayout sv2=(LinearLayout)findViewById(R.id.content_frame);
+                    sv2.removeAllViews();
                     for(int i=0;i<scoreList.size();i++)
                     {
-                        tv.setText(tv.getText().toString()+"\n"+scoreList.toString()+" "+scoreList.get(i).get("Title"));
+                        View v=lin.inflate(R.layout.homelist,null);
+                        TextView tv=(TextView)v.findViewById(R.id.titlelist);
+                        tv.setText(scoreList.get(i).get("Title")+"");
+                        TextView tv2=(TextView)v.findViewById(R.id.desclist);
+                        tv2.setText(scoreList.get(i).get("description")+" ");
+                        LinearLayout sv=(LinearLayout)findViewById(R.id.content_frame);
+                        sv.addView(v);
+
                     }
 
                 } else {
                     Log.d("PIKACHU", "Error: " + e.getMessage());
-                    TextView tv=(TextView)findViewById(R.id.content_frame);
-                    tv.setText("Pikachu");
+                    //TextView tv=(TextView)findViewById(R.id.content_frame);
+                    //tv.setText("Pikachu");
 
                 }
             }
@@ -117,17 +129,26 @@ public class DashBoard extends ActionBarActivity {
             public void done(List<ParseObject> scoreList, ParseException e) {
                 if (e == null) {
                     Log.d("MEWTWO", "Retrieved " + scoreList.size() + " scores");
-                    TextView tv=(TextView)findViewById(R.id.content_frame);
+                    // TextView tv=(TextView)findViewById(R.id.content_frame);
+                    LinearLayout sv2=(LinearLayout)findViewById(R.id.content_frame);
+                    sv2.removeAllViews();
+                    LayoutInflater lin=(LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
                     for(int i=0;i<scoreList.size();i++)
                     {
-                        tv.setText(tv.getText().toString()+"\n"+scoreList.toString()+" "+scoreList.get(i).get("Title"));
-                    }
+                        View v=lin.inflate(R.layout.homelist,null);
+                        TextView tv=(TextView)v.findViewById(R.id.titlelist);
+                        tv.setText(scoreList.get(i).get("Title")+"");
+                        TextView tv2=(TextView)v.findViewById(R.id.desclist);
+                        tv2.setText(scoreList.get(i).get("description")+" ");
+                        LinearLayout sv=(LinearLayout)findViewById(R.id.content_frame);
+                        sv.addView(v);
 
+                    }
 
                 } else {
                     Log.d("PIKACHU", "Error: " + e.getMessage());
-                    TextView tv=(TextView)findViewById(R.id.content_frame);
-                    tv.setText("Pikachu");
+                    //TextView tv=(TextView)findViewById(R.id.content_frame);
+                    //tv.setText("Pikachu");
 
                 }
             }
@@ -143,17 +164,26 @@ public class DashBoard extends ActionBarActivity {
             public void done(List<ParseObject> scoreList, ParseException e) {
                 if (e == null) {
                     Log.d("MEWTWO", "Retrieved " + scoreList.size() + " scores");
-                    TextView tv=(TextView)findViewById(R.id.content_frame);
+                    LinearLayout sv2=(LinearLayout)findViewById(R.id.content_frame);
+                    sv2.removeAllViews();
+                    // TextView tv=(TextView)findViewById(R.id.content_frame);
+                    LayoutInflater lin=(LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
                     for(int i=0;i<scoreList.size();i++)
                     {
-                        tv.setText(tv.getText().toString()+"\n"+scoreList.toString()+" "+scoreList.get(i).get("Title"));
-                    }
+                        View v=lin.inflate(R.layout.homelist,null);
+                        TextView tv=(TextView)v.findViewById(R.id.titlelist);
+                        tv.setText(scoreList.get(i).get("Title")+"");
+                        TextView tv2=(TextView)v.findViewById(R.id.desclist);
+                        tv2.setText(scoreList.get(i).get("description")+" ");
+                        LinearLayout sv=(LinearLayout)findViewById(R.id.content_frame);
+                        sv.addView(v);
 
+                    }
 
                 } else {
                     Log.d("PIKACHU", "Error: " + e.getMessage());
-                    TextView tv=(TextView)findViewById(R.id.content_frame);
-                    tv.setText("Pikachu");
+                    //TextView tv=(TextView)findViewById(R.id.content_frame);
+                    //tv.setText("Pikachu");
 
                 }
             }
@@ -170,16 +200,25 @@ public class DashBoard extends ActionBarActivity {
             public void done(List<ParseObject> scoreList, ParseException e) {
                 if (e == null) {
                     Log.d("MEWTWO", "Retrieved " + scoreList.size() + " scores");
-                    TextView tv=(TextView)findViewById(R.id.content_frame);
+                    // TextView tv=(TextView)findViewById(R.id.content_frame);
+                    LinearLayout sv2=(LinearLayout)findViewById(R.id.content_frame);
+                    sv2.removeAllViews();
+                    LayoutInflater lin=(LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
                     for(int i=0;i<scoreList.size();i++)
                     {
-                        tv.setText(tv.getText().toString()+"\n"+scoreList.toString()+" "+scoreList.get(i).get("Title"));
+                        View v=lin.inflate(R.layout.homelist,null);
+                        TextView tv=(TextView)v.findViewById(R.id.titlelist);
+                        tv.setText(scoreList.get(i).get("Title")+"");
+                        TextView tv2=(TextView)v.findViewById(R.id.desclist);
+                        tv2.setText(scoreList.get(i).get("description")+" ");
+                        LinearLayout sv=(LinearLayout)findViewById(R.id.content_frame);
+                        sv.addView(v);
                     }
 
                 } else {
                     Log.d("PIKACHU", "Error: " + e.getMessage());
-                    TextView tv=(TextView)findViewById(R.id.content_frame);
-                    tv.setText("Pikachu");
+                    //TextView tv=(TextView)findViewById(R.id.content_frame);
+                    //tv.setText("Pikachu");
 
                 }
             }
@@ -196,16 +235,24 @@ public class DashBoard extends ActionBarActivity {
             public void done(List<ParseObject> scoreList, ParseException e) {
                 if (e == null) {
                     Log.d("MEWTWO", "Retrieved " + scoreList.size() + " scores");
-                    TextView tv=(TextView)findViewById(R.id.content_frame);
+                    LayoutInflater lin=(LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+                    LinearLayout sv2=(LinearLayout)findViewById(R.id.content_frame);
+                    sv2.removeAllViews();
                     for(int i=0;i<scoreList.size();i++)
                     {
-                        tv.setText(tv.getText().toString()+"\n"+scoreList.toString()+" "+scoreList.get(i).get("Title"));
+                        View v=lin.inflate(R.layout.homelist,null);
+                        TextView tv=(TextView)v.findViewById(R.id.titlelist);
+                        tv.setText(scoreList.get(i).get("Title")+"");
+                        TextView tv2=(TextView)v.findViewById(R.id.desclist);
+                        tv2.setText(scoreList.get(i).get("description")+" ");
+                       LinearLayout sv=(LinearLayout)findViewById(R.id.content_frame);
+                        sv.addView(v);
                     }
 
                 } else {
                     Log.d("PIKACHU", "Error: " + e.getMessage());
-                    TextView tv=(TextView)findViewById(R.id.content_frame);
-                    tv.setText("Pikachu");
+                    //TextView tv=(TextView)findViewById(R.id.content_frame);
+                    //tv.setText("Pikachu");
 
                 }
             }
