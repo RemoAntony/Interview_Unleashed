@@ -102,9 +102,9 @@ public class DashBoard extends ActionBarActivity {
                     {
                         View v=lin.inflate(R.layout.homelist,null);
                         TextView tv=(TextView)v.findViewById(R.id.titlelist);
-                        tv.setText(scoreList.get(i).get("Title")+"");
+                        tv.setText(scoreList.get(i).get("Title") + "");
                         TextView tv2=(TextView)v.findViewById(R.id.desclist);
-                        tv2.setText(scoreList.get(i).get("description")+" ");
+                        tv2.setText(scoreList.get(i).get("description") + " ");
                         LinearLayout sv=(LinearLayout)findViewById(R.id.content_frame);
                         sv.addView(v);
 
@@ -247,6 +247,14 @@ public class DashBoard extends ActionBarActivity {
                         tv2.setText(scoreList.get(i).get("description")+" ");
                        LinearLayout sv=(LinearLayout)findViewById(R.id.content_frame);
                         sv.addView(v);
+                        v.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v2) {
+                                TextView tv=(TextView)v2.findViewById(R.id.titlelist);
+                                TextView tv2=(TextView)v2.findViewById(R.id.desclist);
+                                Toast.makeText(DashBoard.this,""+tv.getText()+tv2.getText(),Toast.LENGTH_LONG).show();
+                            }
+                        });
                     }
 
                 } else {
