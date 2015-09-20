@@ -23,6 +23,14 @@
             android:name=".DashBoard"
             android:label="@string/title_activity_dash_board" >
         </activity>
+        <activity
+            android:name=".displayfile"
+            android:label="@string/title_activity_displayfile"
+            android:parentActivityName=".DashBoard" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.remo.interviewunleashed.DashBoard" />
+        </activity>
     </application>
 
 </manifest>
