@@ -107,6 +107,18 @@ public class DashBoard extends ActionBarActivity {
                         tv2.setText(scoreList.get(i).get("description") + " ");
                         LinearLayout sv=(LinearLayout)findViewById(R.id.content_frame);
                         sv.addView(v);
+                        v.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v2) {
+                                TextView tv = (TextView) v2.findViewById(R.id.titlelist);
+                                TextView tv2 = (TextView) v2.findViewById(R.id.desclist);
+                                //Toast.makeText(DashBoard.this,""+tv.getText()+tv2.getText(),Toast.LENGTH_LONG).show();
+                                Intent intent = new Intent(DashBoard.this, displayfile.class);
+                                intent.putExtra("Title", tv.getText().toString());
+                                intent.putExtra("description", tv2.getText().toString());
+                                startActivity(intent);
+                            }
+                        });
 
                     }
 
@@ -142,6 +154,18 @@ public class DashBoard extends ActionBarActivity {
                         tv2.setText(scoreList.get(i).get("description")+" ");
                         LinearLayout sv=(LinearLayout)findViewById(R.id.content_frame);
                         sv.addView(v);
+                        v.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v2) {
+                                TextView tv = (TextView) v2.findViewById(R.id.titlelist);
+                                TextView tv2 = (TextView) v2.findViewById(R.id.desclist);
+                                //Toast.makeText(DashBoard.this,""+tv.getText()+tv2.getText(),Toast.LENGTH_LONG).show();
+                                Intent intent = new Intent(DashBoard.this, displayfile.class);
+                                intent.putExtra("Title", tv.getText().toString());
+                                intent.putExtra("description", tv2.getText().toString());
+                                startActivity(intent);
+                            }
+                        });
 
                     }
 
@@ -177,6 +201,18 @@ public class DashBoard extends ActionBarActivity {
                         tv2.setText(scoreList.get(i).get("description")+" ");
                         LinearLayout sv=(LinearLayout)findViewById(R.id.content_frame);
                         sv.addView(v);
+                        v.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v2) {
+                                TextView tv = (TextView) v2.findViewById(R.id.titlelist);
+                                TextView tv2 = (TextView) v2.findViewById(R.id.desclist);
+                                //Toast.makeText(DashBoard.this,""+tv.getText()+tv2.getText(),Toast.LENGTH_LONG).show();
+                                Intent intent = new Intent(DashBoard.this, displayfile.class);
+                                intent.putExtra("Title", tv.getText().toString());
+                                intent.putExtra("description", tv2.getText().toString());
+                                startActivity(intent);
+                            }
+                        });
 
                     }
 
@@ -213,6 +249,19 @@ public class DashBoard extends ActionBarActivity {
                         tv2.setText(scoreList.get(i).get("description")+" ");
                         LinearLayout sv=(LinearLayout)findViewById(R.id.content_frame);
                         sv.addView(v);
+                        v.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v2) {
+                                TextView tv = (TextView) v2.findViewById(R.id.titlelist);
+                                TextView tv2 = (TextView) v2.findViewById(R.id.desclist);
+                                //Toast.makeText(DashBoard.this,""+tv.getText()+tv2.getText(),Toast.LENGTH_LONG).show();
+                                Intent intent = new Intent(DashBoard.this, displayfile.class);
+                                intent.putExtra("Title", tv.getText().toString());
+                                intent.putExtra("description", tv2.getText().toString());
+                                startActivity(intent);
+                            }
+                        });
+
                     }
 
                 } else {
