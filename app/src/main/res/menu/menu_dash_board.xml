@@ -2,6 +2,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.remo.interviewunleashed.DashBoard">
+    <item android:id="@+id/profile" android:title="Welcome"
+        android:orderInCategory="99" app:showAsAction="always"/>
     <item android:id="@+id/logoutt" android:title="Log Out"
         android:orderInCategory="100" app:showAsAction="always" />
 </menu>

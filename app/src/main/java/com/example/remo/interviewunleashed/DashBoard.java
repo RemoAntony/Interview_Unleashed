@@ -35,6 +35,12 @@ public class DashBoard extends ActionBarActivity {
         Toast.makeText(DashBoard.this,"Welcome "+ ParseUser.getCurrentUser().getUsername(),Toast.LENGTH_LONG).show();
         DrawerLayout dl=(DrawerLayout)findViewById(R.id.drawer_layout);
         dl.openDrawer(GravityCompat.START);
+
+        float[] values = new float[] { 2.0f,1.5f, 2.5f, 1.0f , 3.0f };
+        String[] verlabels = new String[] { "great", "ok", "bad" };
+        String[] horlabels = new String[] { "today", "tomorrow", "next week", "next month" };
+        GraphView graphView = new GraphView(this, values, "GraphViewDemo",horlabels, verlabels, GraphView.BAR);
+
     }
     @Override
     public boolean onKeyDown(int keycode,KeyEvent ke)
@@ -58,10 +64,11 @@ public class DashBoard extends ActionBarActivity {
         }
         return super.onKeyDown(keycode, ke);
     }
-
+int userprof;
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
+       userprof= menu.add("Remo").getItemId();
         getMenuInflater().inflate(R.menu.menu_dash_board, menu);
         return true;
     }
@@ -81,9 +88,159 @@ public class DashBoard extends ActionBarActivity {
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
         }
-
+        if(id==userprof)
+        {
+            Toast.makeText(DashBoard.this,"Hello",Toast.LENGTH_LONG).show();
+        }
         return super.onOptionsItemSelected(item);
     }
+
+    public void adgraphln(View view)
+    {
+        //   view.setBackgroundColor(13369344);
+        ParseQuery<ParseObject> query = ParseQuery.getQuery("Home");
+        query.whereEqualTo("Filecategory", "graph");
+        query.findInBackground(new FindCallback<ParseObject>() {
+            public void done(List<ParseObject> scoreList, ParseException e) {
+                if (e == null) {
+                    Log.d("MEWTWO", "Retrieved " + scoreList.size() + " scores");
+                    // TextView tv=(TextView)findViewById(R.id.content_frame);
+                    LayoutInflater lin=(LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+                    LinearLayout sv2=(LinearLayout)findViewById(R.id.content_frame);
+                    sv2.removeAllViews();
+                    for(int i=0;i<scoreList.size();i++)
+                    {
+                        View v=lin.inflate(R.layout.homelist,null);
+                        TextView tv=(TextView)v.findViewById(R.id.titlelist);
+                        tv.setText(scoreList.get(i).get("Title") + "");
+                        TextView tv2=(TextView)v.findViewById(R.id.desclist);
+                        tv2.setText(scoreList.get(i).get("description") + " ");
+                        LinearLayout sv=(LinearLayout)findViewById(R.id.content_frame);
+                        sv.addView(v);
+                        v.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v2) {
+                                TextView tv = (TextView) v2.findViewById(R.id.titlelist);
+                                TextView tv2 = (TextView) v2.findViewById(R.id.desclist);
+                                //Toast.makeText(DashBoard.this,""+tv.getText()+tv2.getText(),Toast.LENGTH_LONG).show();
+                                Intent intent = new Intent(DashBoard.this, displayfile.class);
+                                intent.putExtra("Title", tv.getText().toString());
+                                intent.putExtra("description", tv2.getText().toString());
+                                startActivity(intent);
+                            }
+                        });
+
+                    }
+
+                } else {
+                    Log.d("PIKACHU", "Error: " + e.getMessage());
+                    //TextView tv=(TextView)findViewById(R.id.content_frame);
+                    //tv.setText("Pikachu");
+
+                }
+            }
+        });
+
+    }
+
+    public void adtreeln(View view)
+    {
+        //   view.setBackgroundColor(13369344);
+        ParseQuery<ParseObject> query = ParseQuery.getQuery("Home");
+        query.whereEqualTo("Filecategory", "tree");
+        query.findInBackground(new FindCallback<ParseObject>() {
+            public void done(List<ParseObject> scoreList, ParseException e) {
+                if (e == null) {
+                    Log.d("MEWTWO", "Retrieved " + scoreList.size() + " scores");
+                    // TextView tv=(TextView)findViewById(R.id.content_frame);
+                    LayoutInflater lin=(LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+                    LinearLayout sv2=(LinearLayout)findViewById(R.id.content_frame);
+                    sv2.removeAllViews();
+                    for(int i=0;i<scoreList.size();i++)
+                    {
+                        View v=lin.inflate(R.layout.homelist,null);
+                        TextView tv=(TextView)v.findViewById(R.id.titlelist);
+                        tv.setText(scoreList.get(i).get("Title") + "");
+                        TextView tv2=(TextView)v.findViewById(R.id.desclist);
+                        tv2.setText(scoreList.get(i).get("description") + " ");
+                        LinearLayout sv=(LinearLayout)findViewById(R.id.content_frame);
+                        sv.addView(v);
+                        v.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v2) {
+                                TextView tv = (TextView) v2.findViewById(R.id.titlelist);
+                                TextView tv2 = (TextView) v2.findViewById(R.id.desclist);
+                                //Toast.makeText(DashBoard.this,""+tv.getText()+tv2.getText(),Toast.LENGTH_LONG).show();
+                                Intent intent = new Intent(DashBoard.this, displayfile.class);
+                                intent.putExtra("Title", tv.getText().toString());
+                                intent.putExtra("description", tv2.getText().toString());
+                                startActivity(intent);
+                            }
+                        });
+
+                    }
+
+                } else {
+                    Log.d("PIKACHU", "Error: " + e.getMessage());
+                    //TextView tv=(TextView)findViewById(R.id.content_frame);
+                    //tv.setText("Pikachu");
+
+                }
+            }
+        });
+
+    }
+
+    public void videoln(View view)
+    {
+        //   view.setBackgroundColor(13369344);
+        ParseQuery<ParseObject> query = ParseQuery.getQuery("Home");
+        query.whereEqualTo("Filecategory", "tree");
+        query.findInBackground(new FindCallback<ParseObject>() {
+            public void done(List<ParseObject> scoreList, ParseException e) {
+                if (e == null) {
+                    Log.d("MEWTWO", "Retrieved " + scoreList.size() + " scores");
+                    // TextView tv=(TextView)findViewById(R.id.content_frame);
+                    LayoutInflater lin=(LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+                    LinearLayout sv2=(LinearLayout)findViewById(R.id.content_frame);
+                    sv2.removeAllViews();
+                    for(int i=0;i<scoreList.size();i++)
+                    {
+                        View v=lin.inflate(R.layout.homelist,null);
+                        TextView tv=(TextView)v.findViewById(R.id.titlelist);
+                        tv.setText(scoreList.get(i).get("Title") + "");
+                        TextView tv2=(TextView)v.findViewById(R.id.desclist);
+                        tv2.setText(scoreList.get(i).get("description") + " ");
+                        LinearLayout sv=(LinearLayout)findViewById(R.id.content_frame);
+                        sv.addView(v);
+                        v.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v2) {
+                                TextView tv = (TextView) v2.findViewById(R.id.titlelist);
+                                TextView tv2 = (TextView) v2.findViewById(R.id.desclist);
+                                //Toast.makeText(DashBoard.this,""+tv.getText()+tv2.getText(),Toast.LENGTH_LONG).show();
+                                Intent intent = new Intent(DashBoard.this, displayfile.class);
+                                intent.putExtra("Title", tv.getText().toString());
+                                intent.putExtra("description", tv2.getText().toString());
+                                startActivity(intent);
+                            }
+                        });
+
+                    }
+
+                } else {
+                    Log.d("PIKACHU", "Error: " + e.getMessage());
+                    //TextView tv=(TextView)findViewById(R.id.content_frame);
+                    //tv.setText("Pikachu");
+
+                }
+            }
+        });
+
+    }
+
+
+
 
     public void dsln(View view)
     {

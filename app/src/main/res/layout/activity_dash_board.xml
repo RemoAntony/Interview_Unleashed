@@ -119,6 +119,44 @@
                 android:background="#c3c3e5"
                 android:layout_width="match_parent"
                 android:layout_height="2dp"/>
+            <Button
+                android:background="#8c489f"
+                android:onClick="adgraphln"
+                android:id="@+id/adgraphln"
+                android:layout_gravity="center"
+                android:text="Advanced Graph"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="80dp" />
+            <View
+                android:background="#c3c3e5"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"/>
+            <Button
+                android:background="#8c489f"
+                android:onClick="adtreeln"
+                android:id="@+id/adtreeln"
+                android:layout_gravity="center"
+                android:text="Advanced Trees"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="80dp" />
+            <View
+                android:background="#c3c3e5"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"/>
+            <Button
+                android:background="#8c489f"
+                android:onClick="videoln"
+                android:id="@+id/videoln"
+                android:layout_gravity="center"
+                android:text="Video Tutorials"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="80dp" />
 
         </LinearLayout>
     </ScrollView>
